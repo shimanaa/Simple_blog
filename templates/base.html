@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>blog</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	{% block static_files %} {% endblock static_files %}
+</head>
+<body>
+
+	{% include 'inc/navbar.html' %}
+	<div class="container-fluid bg-dark">
+	<div class="col-md-12 mr-sm-auto col-lg-12 px-md-0 mainMenu">
+		<div class="jumbotron">
+			{% include 'inc/messages.html' %}
+			{% block content %} {% endblock content %}
+		</div>
+	</div>
+	</div>
+
+</body>
+</html>

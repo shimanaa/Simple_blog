@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block static_files %}
+	<link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+{% endblock static_files %}
+
+
+{% block content %}
+	<h3>{{ artdetails.title }}</h3>
+	<small>{{ artdetails.body|safe}}</small><hr>
+	<small>{{ artdetails.created|timesince}}</small><hr>
+	<small>{{ artdetails.update }}</small><hr>
+{% endblock content %}

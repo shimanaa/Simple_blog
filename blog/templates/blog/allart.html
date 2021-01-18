@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	<div class="card">
+		{% for i in allArticles %}
+			<h4><a href="{{ i.get_absolute_url }}" class="card-body">{{ i.title }}</a></h4>
+		{% endfor %}
+	</div>
+
+{% endblock content %}
+

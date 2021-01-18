@@ -1,0 +1,13 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-0 rounded-0">
+	<div class="navbar-nav">
+		<h4><a class="nav-link active" aria-current="page" href="{% url 'blog:allArticle' %}">Home</a></h4>
+		{% if user.is_authenticated %}
+			<h4><a class="nav-link active" aria-current="page" href="{% url 'accounts:user_logout' %}">Logout</a></h4>
+		{% else %}
+			<h4><a class="nav-link active" aria-current="page" href="{% url 'accounts:user_login' %}">Login</a></h4>
+			<h4><a class="nav-link active" aria-current="page" href="{% url 'accounts:user_register' %}">Register</a></h4>
+		{% endif %}	
+	</div>
+</nav>
+
+                        
